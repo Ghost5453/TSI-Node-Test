@@ -3,13 +3,16 @@ public class Node {
     public int data;
     public boolean isLeaf;
     public Node left, right;
+    private Node _pairant;
+    private  int _id;
 
-    Node(int data)
+    Node(int data, Node myParent)
     {
         this.data = data;
         this.right = null;
         this.left = null;
         this.isLeaf = true;
+        _pairant = myParent;
     }
 
     public void AddToLeft(Node myNode)
